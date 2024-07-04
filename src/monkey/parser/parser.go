@@ -41,7 +41,6 @@ func (p *Parser) ParseProgram() *ast.Program {
 
     for !p.curTokenIs(token.EOF) {
         statement := p.parseStatement()
-        // statement.(*ast.LetStatement).PrintAsString()
         if statement != nil {
             program.Statements = append(program.Statements, statement)
         }
